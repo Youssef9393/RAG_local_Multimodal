@@ -27,25 +27,4 @@ Application RAG (Retrieval-Augmented Generation) locale permettant de poser des 
 🔒 100% local & données privées
 
 🏗️ Architecture du projet
-RAG_Local_Multimodal/
-│
-├── data/
-│   ├── documents/          # PDFs
-│   └── videos/             # Vidéos
-│
-├── ingest/
-│   ├── pdf_loader.py       # Extraction texte PDF
-│   ├── video_loader.py     # Vidéo → Audio → Texte
-│   ├── chunking.py         # Découpage des documents
-│
-├── vector_store/
-│   └── faiss_store.py      # Construction FAISS
-│
-├── rag/
-│   ├── retriever.py        # Logique de récupération
-│   └── generator.py        # Chaîne RAG (Prompt + LLM)
-│
-├── app.py                  # Application Streamlit
-├── config.py               # Configuration globale
-├── requirements.txt
-└── README.md
+<img width="478" height="565" alt="image" src="https://github.com/user-attachments/assets/50d8948a-880c-4157-81e8-4ae129f832a6" />
