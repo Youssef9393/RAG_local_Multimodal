@@ -1,0 +1,27 @@
+# Interface
+streamlit>=1.32.0
+
+# LangChain core
+langchain>=0.2.10
+langchain-core>=0.2.20
+langchain-community>=0.2.10
+langchain-openai>=0.1.20
+
+# Vector store
+faiss-cpu>=1.8.0
+
+# Embeddings
+sentence-transformers>=2.6.1
+torch>=2.1.0
+
+# PDF processing
+pypdf>=4.2.0
+
+# Video / Audio processing
+moviepy>=1.0.3
+openai-whisper>=20231117
+
+# Utils
+numpy>=1.24
+tqdm>=4.66.0
+python-dotenv>=1.0.1
