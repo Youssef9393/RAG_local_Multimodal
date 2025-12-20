@@ -26,5 +26,4 @@ Application RAG (Retrieval-Augmented Generation) locale permettant de poser des 
 
 🔒 100% local & données privées
 
-🏗️ Architecture du projet
 <img width="478" height="565" alt="image" src="https://github.com/user-attachments/assets/50d8948a-880c-4157-81e8-4ae129f832a6" />
