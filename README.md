@@ -6,24 +6,114 @@ Application RAG (Retrieval-Augmented Generation) locale permettant de poser des 
 <img width="1055" height="543" alt="image" src="https://github.com/user-attachments/assets/7a80518f-b8d1-4cba-b652-88d020adc323" />
 
 
-📌 Fonctionnalités
+Project Requirements
 
-📄 Ingestion automatique des PDF
+This project is a 100% local, privacy-preserving RAG system that ingests documents and videos, converts them into embeddings, and enables semantic search with conversational AI.
 
-🎥 Transcription des vidéos → texte
+🧩 Functional Requirements
+📄 Document Ingestion
 
-✂️ Chunking intelligent des documents
+Automatic ingestion of PDF files
 
-🧠 Génération d’embeddings
+Text extraction using reliable PDF parsers
 
-📦 Stockage vectoriel avec FAISS
+Support for multi-page and large documents
 
-🔍 Recherche sémantique (Top-K)
+🎥 Video Transcription
 
-🤖 Génération de réponses via LLM local
+Accepts video files (.mp4, .mkv, .avi)
 
-💬 Interface conversationnelle avec Streamlit
+Automatic speech-to-text transcription
 
-🔒 100% local & données privées
+Language detection and normalization
+
+Timestamped transcription support (optional)
+
+✂️ Intelligent Chunking
+
+Context-aware text chunking
+
+Configurable chunk size and overlap
+
+Preserves semantic coherence
+
+Supports documents and transcriptions
+
+🧠 Embedding Generation
+
+Local embedding generation (no external APIs)
+
+Support for open-source embedding models (e.g. BGE, E5, SBERT)
+
+Batch processing for performance optimization
+
+📦 Vector Storage
+
+Vector indexing using FAISS
+
+Persistent local storage
+
+Fast similarity search on large datasets
+
+🔍 Semantic Search
+
+Top-K semantic retrieval
+
+Cosine similarity metric
+
+Query embedding generation
+
+Ranked results with metadata
+
+🤖 Local LLM Response Generation
+
+Fully local LLM inference (CPU or GPU)
+
+Uses retrieved chunks as context (RAG)
+
+Configurable prompt templates
+
+Hallucination reduction via grounded context
+
+💬 Conversational Interface
+
+Interactive chatbot interface using Streamlit
+
+Chat history management
+
+Real-time response streaming (optional)
+
+User-friendly document querying
+
+🔒 Privacy & Security
+
+100% local execution
+
+No data sent to external servers
+
+All documents, embeddings, and models stored locally
+
+⚙️ Non-Functional Requirements
+Performance
+
+Efficient chunking and embedding pipelines
+
+Low-latency semantic search
+
+Scalable to thousands of documents
+
+Compatibility
+
+Cross-platform (Linux, macOS, Windows)
+
+Python 3.9+
+
+Maintainability
+
+Modular architecture
+
+Clear separation of ingestion, retrieval, and generation
+
+Well-documented codebase
 
 <img width="478" height="565" alt="image" src="https://github.com/user-attachments/assets/50d8948a-880c-4157-81e8-4ae129f832a6" />
