@@ -20,8 +20,6 @@ The system guarantees **full privacy** because **no external APIs are used**. Al
 
 # ⚙️ Installation
 
-## 1️⃣ Clone the repository
-
 ```bash
 git clone https://github.com/yourusername/local-rag-system.git
 cd local-rag-system
@@ -29,11 +27,11 @@ python -m venv venv
 # Start Chat Interface
 streamlit run app/streamlit_app.py
 pip install -r requirements.txt
-# 🧠 Architecture Overview
+# Architecture Overview
 
 This project implements a complete **RAG pipeline** composed of two major phases:
 
-## 1️⃣ Augmentation (Retrieval Pipeline)
+## Augmentation (Retrieval Pipeline)
 
 1. Document   
 2. Text extraction or speech transcription  
@@ -42,7 +40,7 @@ This project implements a complete **RAG pipeline** composed of two major phases
 5. Vector storage using **FAISS**  
 6. Semantic similarity search  
 
-## 2️⃣ Generation
+## Generation
 
 1. Retrieve relevant chunks  
 2. Build a prompt with retrieved context  
@@ -53,7 +51,7 @@ This project implements a complete **RAG pipeline** composed of two major phases
 
 # ✨ Features
 
-## 📄 Document Ingestion
+## Document Ingestion
 
 - Automatic **PDF ingestion**
 - Multi-page support
@@ -70,7 +68,7 @@ Features:
 
 ---
 
-## ✂️ Intelligent Chunking
+## Intelligent Chunking
 
 - Context-aware splitting
 - Configurable chunk size
@@ -79,7 +77,7 @@ Features:
 
 ---
 
-## 🧠 Embedding Generation
+## Embedding Generation
 
 Fully local embedding generation.
 
@@ -96,7 +94,7 @@ Features:
 
 ---
 
-## 📦 Vector Storage
+## Vector Storage
 
 Vector database powered by **FAISS**
 
@@ -108,7 +106,7 @@ Capabilities:
 
 ---
 
-## 🔍 Semantic Search
+## Semantic Search
 
 - Query embedding generation
 - Cosine similarity search
@@ -117,7 +115,7 @@ Capabilities:
 
 ---
 
-## 🤖 Local LLM Response Generation
+## Local LLM Response Generation
 
 Uses **Ollama** to run LLMs locally.
 
@@ -130,7 +128,7 @@ Benefits:
 
 ---
 
-## 💬 Conversational Interface
+## Conversational Interface
 
 Interactive chatbot built with **Streamlit**.
 
@@ -143,7 +141,7 @@ Features:
 
 ---
 
-## 🔒 Privacy & Security
+## Privacy & Security
 
 ✔ 100% Local execution  
 ✔ No data sent to external servers  
@@ -151,6 +149,7 @@ Features:
 
 ---
 
-# 🧱 Project Structure
+# Project Structure
 
-<img width="478" height="565" alt="image" src="https://github.com/user-attachments/assets/50d8948a-880c-4157-81e8-4ae129f832a6" />
+<img width="478" height="565" alt="image" src="https://github.com/user-attachments/assets/91707cb6-6f07-4830-9c46-5c49c2514847" />
+
