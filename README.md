@@ -8,112 +8,149 @@ Application RAG (Retrieval-Augmented Generation) locale permettant de poser des 
 
 Project Requirements
 
-This project is a 100% local, privacy-preserving RAG system that ingests documents and videos, converts them into embeddings, and enables semantic search with conversational AI.
+# 📚 Local RAG System — Document
 
-🧩 Functional Requirements
-📄 Document Ingestion
+A **100% local Retrieval-Augmented Generation (RAG) system** that ingests **documents **, converts them into embeddings, performs **semantic search**, and answers questions using a **local LLM**.
 
-Automatic ingestion of PDF files
+The system guarantees **full privacy** because **no external APIs are used**. All processing (embeddings, vector search, LLM inference) runs **locally on your machine**.
 
-Text extraction using reliable PDF parsers
+---
 
-Support for multi-page and large documents
+---
 
-🎥 Video Transcription
+# ⚙️ Installation
 
-Accepts video files (.mp4, .mkv, .avi)
+## 1️⃣ Clone the repository
 
-Automatic speech-to-text transcription
+```bash
+git clone https://github.com/yourusername/local-rag-system.git
+cd local-rag-system
+python -m venv venv
+# Start Chat Interface
+streamlit run app/streamlit_app.py
+pip install -r requirements.txt
+# 🧠 Architecture Overview
 
-Language detection and normalization
+This project implements a complete **RAG pipeline** composed of two major phases:
 
-Timestamped transcription support (optional)
+## 1️⃣ Augmentation (Retrieval Pipeline)
 
-✂️ Intelligent Chunking
+1. Document   
+2. Text extraction or speech transcription  
+3. Intelligent chunking  
+4. Embedding generation  
+5. Vector storage using **FAISS**  
+6. Semantic similarity search  
 
-Context-aware text chunking
+## 2️⃣ Generation
 
-Configurable chunk size and overlap
+1. Retrieve relevant chunks  
+2. Build a prompt with retrieved context  
+3. Send prompt to **local LLM (Ollama)**  
+4. Generate a contextual response  
 
-Preserves semantic coherence
+---
 
-Supports documents and transcriptions
+# ✨ Features
 
-🧠 Embedding Generation
+## 📄 Document Ingestion
 
-Local embedding generation (no external APIs)
+- Automatic **PDF ingestion**
+- Multi-page support
+- Efficient text extraction
+- Large document handling
 
-Support for open-source embedding models (e.g. BGE, E5, SBERT)
+---
 
-Batch processing for performance optimization
+Features:
 
-📦 Vector Storage
+- Automatic speech-to-text
+- Language detection
+- Optional timestamp transcription
 
-Vector indexing using FAISS
+---
 
-Persistent local storage
+## ✂️ Intelligent Chunking
 
-Fast similarity search on large datasets
+- Context-aware splitting
+- Configurable chunk size
+- Configurable overlap
+- Preserves semantic meaning
 
-🔍 Semantic Search
+---
 
-Top-K semantic retrieval
+## 🧠 Embedding Generation
 
-Cosine similarity metric
+Fully local embedding generation.
 
-Query embedding generation
+Supported models:
 
-Ranked results with metadata
+- **BGE**
+- **E5**
+- **SBERT**
 
-🤖 Local LLM Response Generation
+Features:
 
-Fully local LLM inference (CPU or GPU)
+- Batch processing
+- High performance
 
-Uses retrieved chunks as context (RAG)
+---
 
-Configurable prompt templates
+## 📦 Vector Storage
 
-Hallucination reduction via grounded context
+Vector database powered by **FAISS**
 
-💬 Conversational Interface
+Capabilities:
 
-Interactive chatbot interface using Streamlit
+- Persistent storage
+- Fast similarity search
+- Large dataset handling
 
-Chat history management
+---
 
-Real-time response streaming (optional)
+## 🔍 Semantic Search
 
-User-friendly document querying
+- Query embedding generation
+- Cosine similarity search
+- Top-K retrieval
+- Ranked results
 
-🔒 Privacy & Security
+---
 
-100% local execution
+## 🤖 Local LLM Response Generation
 
-No data sent to external servers
+Uses **Ollama** to run LLMs locally.
 
-All documents, embeddings, and models stored locally
+Benefits:
 
-⚙️ Non-Functional Requirements
-Performance
+- Fully offline
+- Context-based answers
+- Reduced hallucinations
+- Configurable prompts
 
-Efficient chunking and embedding pipelines
+---
 
-Low-latency semantic search
+## 💬 Conversational Interface
 
-Scalable to thousands of documents
+Interactive chatbot built with **Streamlit**.
 
-Compatibility
+Features:
 
-Cross-platform (Linux, macOS, Windows)
+- Chat interface
+- Chat history
+- Real-time responses
+- Document-based Q&A
 
-Python 3.9+
+---
 
-Maintainability
+## 🔒 Privacy & Security
 
-Modular architecture
+✔ 100% Local execution  
+✔ No data sent to external servers  
+✔ Local storage for all files and models  
 
-Clear separation of ingestion, retrieval, and generation
+---
 
-Well-documented codebase
+# 🧱 Project Structure
 
 <img width="478" height="565" alt="image" src="https://github.com/user-attachments/assets/50d8948a-880c-4157-81e8-4ae129f832a6" />
