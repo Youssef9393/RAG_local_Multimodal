@@ -3,7 +3,7 @@
 Application RAG (Retrieval-Augmented Generation) locale permettant de poser des questions sur des documents PDF et des vidéos, en combinant FAISS, LangChain et un LLM local (Ollama / Mistral) via une interface Streamlit.
 
 <img width="1903" height="933" alt="image" src="https://github.com/user-attachments/assets/f31ed8a6-464b-4f15-afb8-c08d8a7fc4e1" />
-<img width="1055" height="543" alt="image" src="https://github.com/user-attachments/assets/7a80518f-b8d1-4cba-b652-88d020adc323" />
+<img width="1263" height="663" alt="image" src="https://github.com/user-attachments/assets/956d351c-d4d2-4855-a556-542d84231689" />
 
 
 Project Requirements
