@@ -17,7 +17,6 @@ def load_pdfs_from_folder(folder_path: str) -> list:
 
     return texts
 
-# pip install pytesseract pdf2image pillow
 
 import pytesseract
 from pdf2image import convert_from_path
