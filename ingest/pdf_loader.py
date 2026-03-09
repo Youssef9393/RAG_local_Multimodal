@@ -1,5 +1,7 @@
 import os
 from pypdf import PdfReader
+import pytesseract
+from pdf2image import convert_from_path
 
 def load_pdfs_from_folder(folder_path: str) -> list:
     texts = []
@@ -17,9 +19,6 @@ def load_pdfs_from_folder(folder_path: str) -> list:
 
     return texts
 
-
-import pytesseract
-from pdf2image import convert_from_path
 
 def extract_text_from_scanned_pdf(pdf_path, lang='fra'):
     """
