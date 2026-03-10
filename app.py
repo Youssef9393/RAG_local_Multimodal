@@ -23,7 +23,7 @@ st.title("🤖 RAG Multimodal Chat")
 # -----------------------------
 # Load RAG (cached)
 # -----------------------------
-@st.cache_resource(show_spinner="🔄 Loading knowledge base...")
+@st.cache_resource(show_spinner=" Loading knowledge base...")
 def load_rag():
     if not os.path.exists(DATA_PDF) or not os.path.exists(DATA_VIDEO):
         st.error(" Data folders not found.")
@@ -35,7 +35,7 @@ def load_rag():
     all_texts = pdf_texts + video_texts
 
     if not all_texts:
-        st.warning("⚠️ Aucun document trouvé.")
+        st.warning(" Aucun document trouvé.")
         return None
 
     chunks = chunk_documents(all_texts)
@@ -58,14 +58,14 @@ if "messages" not in st.session_state:
 # Sidebar : Historique
 # -----------------------------
 with st.sidebar:
-    st.title("📚 Historique")
+    st.title(" Historique")
 
     if not st.session_state.messages:
         st.caption("Aucune conversation")
     else:
         for i, msg in enumerate(st.session_state.messages):
             if msg["role"] == "user":
-                st.markdown(f"**🧑 {i//2 + 1}.** {msg['content']}")
+                st.markdown(f"** {i//2 + 1}.** {msg['content']}")
 
     if st.button("🗑️ Effacer l'historique"):
         st.session_state.messages = []
@@ -107,7 +107,7 @@ if user_input and rag_chain:
                 )
 
             except Exception as e:
-                error_msg = f"❌ Erreur : {e}"
+                error_msg = f"Erreur : {e}"
                 st.error(error_msg)
                 st.session_state.messages.append(
                     {"role": "assistant", "content": error_msg}
