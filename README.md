@@ -1,4 +1,4 @@
-🤖 RAG Multimodal Local (PDF & Vidéo)
+## 🤖 RAG Multimodal Local (PDF & Vidéo)
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![RAG](https://img.shields.io/badge/RAG-Multimodal-red)
@@ -7,25 +7,38 @@
 ![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B)
 ![Offline](https://img.shields.io/badge/Offline-100%25-success)
 
-Application RAG (Retrieval-Augmented Generation) locale permettant de poser des questions sur des documents PDF et des vidéos, en combinant FAISS, LangChain et un LLM local (Ollama / Mistral) via une interface Streamlit.
+A **100% local Retrieval-Augmented Generation (RAG) system** that ingests **documents **, converts them into embeddings, performs **semantic search**, and answers questions using a **local LLM**.
+
+The system guarantees **full privacy** because **no external APIs are used**. All processing (embeddings, vector search, LLM inference) runs **locally on your machine**.
 
 <img width="1903" height="933" alt="image" src="https://github.com/user-attachments/assets/f31ed8a6-464b-4f15-afb8-c08d8a7fc4e1" />
 <img width="1263" height="663" alt="image" src="https://github.com/user-attachments/assets/956d351c-d4d2-4855-a556-542d84231689" />
 
 
-Project Requirements
+## Project Requirements
 
-# 📚 Local RAG System — Document
+## Project structure
 
-A **100% local Retrieval-Augmented Generation (RAG) system** that ingests **documents **, converts them into embeddings, performs **semantic search**, and answers questions using a **local LLM**.
-
-The system guarantees **full privacy** because **no external APIs are used**. All processing (embeddings, vector search, LLM inference) runs **locally on your machine**.
-
----
-
----
-
-# ⚙️ Installation
+```text
+local-rag-system/
+├── app/
+│   └── streamlit_app.py        # Streamlit interface
+├── backend/
+│   ├── ingestion/              # PDF and video ingestion
+│   ├── processing/             # Chunking and preprocessing
+│   ├── embeddings/             # Embedding generation
+│   ├── vectorstore/            # FAISS index management
+│   ├── llm/                    # Ollama integration
+│   └── retrieval/              # Semantic search pipeline
+├── data/
+│   ├── documents/              # Input PDFs
+│   ├── videos/                 # Input videos
+│   └── transcripts/            # Generated transcripts
+├── models/                     # Local embedding models
+├── vectorstore/                # Persistent FAISS indexes
+├── requirements.txt
+└── README.md
+```
 
 ```bash
 git clone https://github.com/yourusername/local-rag-system.git
@@ -33,8 +46,18 @@ cd local-rag-system
 python -m venv venv
 # Start Chat Interface
 streamlit run app/streamlit_app.py
-pip install -r requirements.txt
-# Architecture Overview
+pip install -r requirements.txt```
+
+# Architecture Overview`
+
+
+
+---
+
+---
+
+# ⚙️ Installation
+
 
 # Local Multimodal RAG System (PDF & Video)
 
@@ -172,28 +195,7 @@ The system is composed of two main phases.
 
 ---
 
-## Project structure
 
-```text
-local-rag-system/
-├── app/
-│   └── streamlit_app.py        # Streamlit interface
-├── backend/
-│   ├── ingestion/              # PDF and video ingestion
-│   ├── processing/             # Chunking and preprocessing
-│   ├── embeddings/             # Embedding generation
-│   ├── vectorstore/            # FAISS index management
-│   ├── llm/                    # Ollama integration
-│   └── retrieval/              # Semantic search pipeline
-├── data/
-│   ├── documents/              # Input PDFs
-│   ├── videos/                 # Input videos
-│   └── transcripts/            # Generated transcripts
-├── models/                     # Local embedding models
-├── vectorstore/                # Persistent FAISS indexes
-├── requirements.txt
-└── README.md
-```
 
 ---
 
